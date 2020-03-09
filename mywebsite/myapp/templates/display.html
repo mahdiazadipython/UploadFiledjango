@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{% load static %}
+
+<div class="container my-3">
+    <div class="row mt-3">
+        {% for object in products %}
+        <div class="col-sm-8">
+            <video width="400"  controls>
+        <source src="{{object.cover.url}}" type="video/mp4">
+
+      </video>
+      <p class="text-center tect-dark">{{ object.name }}</p>
+      <p class="text-center text-dark">{{ object.title }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+
+{% endblock %}
